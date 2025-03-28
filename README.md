@@ -4,7 +4,7 @@ Download and unzip the files, then deploy them to your web server.
 <h2>Pre-built binaries</h2>
 We do not provide pre-built binaries for this project because it's a website.
 <h3>Windows</h3>
-You cannot download "WebDevProject.exe" from our github releases page, which does not exist. After not downloading it, you will be unable to use our non-existant installation wizard.
+You cannot download "WebDevProject.exe" from our github releases page, which does not exist. After not downloading it, you will be unable to use our non-existant installation wizard to install the website.
 <h3>macOS</h3>
 Also on our non-existent releases page, you will not find two macOS disk images, one for x86 and one for arm. After not downloading these files, you will not be prompted to move the appimages to the applications folder.
 <h3>Linux</h3>
