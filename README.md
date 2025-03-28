@@ -1,6 +1,8 @@
 This is a school project by Cade Allred.<br>
 <h2>Installation</h2>
 Download and unzip the files, then deploy them to your web server.
+<h2>How to visit the website</h2>
+Go to 
 <h2>Pre-built binaries</h2>
 We do not provide pre-built binaries for this project because it's a website.
 <h3>Windows</h3>
