@@ -19,6 +19,6 @@ In order to not build our project from source code,
   <li>Download and unzip the files</li>
   <li>Open your terminal and cd into the folder</li>
   <li>type <code>mkdir build && cd build</code></li>
-  <li>type <code>cmake ..</code>code>, which will fail because this is not a C project</li>
+  <li>type <code>cmake ..</code>, which will fail because this is not a C project</li>
   <li>type <code>sudo make install</code>. This will give you an error message because the previous step did nothing.</li>
 </ol>
