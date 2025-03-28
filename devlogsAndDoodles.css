@@ -1,0 +1,160 @@
+a:link, a:visited {
+	color: #6FBB6F;
+	text-decoration: none;
+}
+a:hover, a:active{
+	background-color: #acffac;
+	color: #ffffff;	
+}
+h1{
+	color: #6FBB6F;
+}
+body{
+	background-color: #666666;
+	color: #ffffff;
+	font-family: arial, calibri, sans-serif;
+	font-size: 1.1em;
+}
+.button{
+	color: #ffffff;
+	background-color: #6fbb6f;
+	font-weight: bold;
+	font-size: 120%;
+	border: none;
+}
+.button:hover{
+	color: #6fbb6f;
+	background-color: #ffffff;
+}
+footer{
+	text-align: center;
+	clear: left;
+}
+form{
+	display: grid;
+	gap: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60em;
+	background-color: #555555;
+	grid-template-columns: 1em auto auto;
+	padding: 1em;
+}
+form p{
+	grid-column:1/4;
+}
+form span{
+	grid-column:1/3;
+}
+header{
+	background-color: #6FBB6F;
+	text-align: center;
+}
+header h1{
+	color: #ffffff;
+}
+nav{
+	box-sizing: border-box;
+	background-color: #555555;
+	float: left;
+	position: fixed;
+	width: 9%;
+	height: 100vh;
+	position: fixed;
+	padding: none;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li{
+	margin: 0;
+	padding: 0;
+	text-indent: 0.5em;
+}
+nav a{
+	text-decoration: none;
+	width: 100%;
+	display: block;
+}
+table{
+	margin: 1em;
+	border: 0.5em solid #6fbb6f;
+	border-spacing: 0px;
+}
+textArea{
+	grid-column: 1/4
+}
+thead{
+	background-color: #6fbb6f;
+	height: 150%;
+}
+tr{
+	border: none;
+	margin: 0px;
+}
+td{
+	border: 0px;
+	margin: 0px;
+}
+th{
+	font-size: 150%;
+}
+tr:nth-of-type(even){
+	background-color: #6fbb6f;
+}
+.attribution{
+	font-size: 60%;
+}
+.hero{
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;	
+}
+.panelOneThird, .panel{
+	box-sizing: border-box;
+	margin: 0%;
+	border-style: solid;
+	border-color: #666666;
+	border: 1%;
+	padding: 0;
+	color: #ffffff;
+	background-color: #6fbb6f;
+	font-weight: bold;
+	font-size: 2em;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+.panelOneThird img, .panel img{
+	width: 100%
+}
+.panelOneThird:hover, .panel:hover{
+	color: #6fbb6f;
+	background-color: #ffffff;
+}
+.panelOneThird{
+	width: 33.333%;
+	margin-top: 1em;
+}
+.panel{
+	width: 100%;
+	text-align: center;
+}
+.wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 75em;
+	width: 90%;
+}
+@media(max-width: 320px){
+	body{
+		font-size: 80%;
+	}
+	.wrapper{
+		width: 100vw;
+	}
+}
