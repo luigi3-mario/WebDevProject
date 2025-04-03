@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Making Chess in Godot Was a Lot Harder Than I Thought</title>
+    <title>Making Characters for my game: part 1</title>
     <link href="devlogsAndDoodles.css" rel="stylesheet">
   </head>
   <body>
@@ -15,6 +15,16 @@
 		<main>
 			<p>Recently, I have been thinking a lot about Pokémon, and more specifically about how I would change it if I were the designer. The actual changes are  story for a different blogpost, but suffice it to say that, within a few days, I was planning my own game in the same style.</p>
 			<p>As I was thinking about story elements, I realised I would need to create character designs. The main characters for Pokémon games usually have really cool designs, and I want to create something similar, but with characters that are a bit older.</p>
+			<p>In <a href="3dModeling.html">the previous article,</a> I showed you guys my journey trying to create a 3d model. I decided that I would start over with a model that I could actually use.</p>
+			<p>At first, I thought I&#39;d try using the <a href="https://github.com/wjakob/instant-meshes">Automatic Quad Remesher</a> to automate the retopology. However, I found that the mesh it generated didn&#39;t play well with rigging.</p>
+			<figure><a href="media/armMessedup.png"><img src="media/armMessedupResized.png" alt="messed up arm"></a><figcaption>Not only are parts of the hand not moving, there is a weird jagged line on the forearm.</figcaption></figure>
+			<p>I thus decided to manually retopologize the whole model. And you know what? It wasn&#39;t that bad! Now that I wasn&#39;t obsessively following the video tutorial, I was much faster and more motivated. Instead of copying Bran Sculpts&#39;s every move, I was coming up with my own solutions to the problems I faced. Now that I understood the <em>purpose</em> of retopology, I was able to create a much better flow.</p>
+			<figure><a href="media/goodRetop.png"><img src="media/goodRetopResized.png" alt="Retopologized human back"></a><figcaption>This looks way better than my previous attempt at retopology.</figcaption></figure>
+			<p>But when I went back to rigging, the problems returned. Now, the rig was failing to generate because I deleted the wrong bones or something. I then re-created the rig from scratch, but then different problems showed up. Several body parts were moving in ways they weren't supposed to. Basically every body part would warp strangely when it moved (often in the wrong direction), and took other body parts with it.</p>
+			<figure><a href="media/strange-movement.png"><img src="media/strange_movementResized.png" alt="character moving its arms... and head?"></a><figcaption>Uhhh... That&#39;s not how arms work</figcaption></figure>
+			<p>Unfortunately, I have yet to resolve this problem. When I have time, I will update y&#39;all again.</p>
+			<p>In the meantime, I also took up drawing again. I decided I would start from the basics, just sort of copying reference images. Unfortunately, all of the characters I drew are copyrighted, so I can&#39;t show you the results, but I think they&#39;re pretty good.</p>
+			<p>What i <em>can</em> show you are a few terrible sketches I made of some of the characters. Once the model is finished, I hope to use it as a basis for these designs.</p>
    	</main>
     </div>
     <footer></footer>
