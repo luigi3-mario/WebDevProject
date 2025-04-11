@@ -1,13 +1,20 @@
+:root{
+	--main-text: #ffffff;
+	--background: #666666;
+	--background-dark: #555555;
+	--accent: #04aa6d;
+	--accent-dark: #038845;
+}
 a:link, a:visited {
-	color: #6FBB6F;
+	color: var(--accent);
 	text-decoration: none;
 }
 a:hover, a:active{
-	background-color: #acffac;
-	color: #ffffff;	
+	background-color: var(--accent);
+	color: var(--main-text);
 }
 h1{
-	color: #6FBB6F;
+	color: var(--accent);
 }
 img, video{
 	margin-left: auto;
@@ -15,21 +22,10 @@ img, video{
 	display: block;
 }
 body{
-	background-color: #666666;
-	color: #ffffff;
+	background-color: var(--background);
+	color: var(--main-text);
 	font-family: arial, calibri, sans-serif;
 	font-size: 1.1em;
-}
-.button{
-	color: #ffffff;
-	background-color: #6fbb6f;
-	font-weight: bold;
-	font-size: 120%;
-	border: none;
-}
-.button:hover{
-	color: #6fbb6f;
-	background-color: #ffffff;
 }
 figcaption{
 	text-align: center;
@@ -44,7 +40,7 @@ form{
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 60em;
-	background-color: #555555;
+	background-color: var(--background-dark);
 	grid-template-columns: 1em auto auto;
 	padding: 1em;
 }
@@ -55,28 +51,33 @@ form span{
 	grid-column:1/3;
 }
 header{
-	background-color: #6FBB6F;
+	background-color: var(--accent);
 	text-align: center;
 }
 header h1{
 	color: #ffffff;
 }
+main{
+}
 nav{
 	box-sizing: border-box;
-	background-color: #555555;
-	float: left;
-	position: fixed;
-	width: 9%;
-	height: 100vh;
-	position: fixed;
+	margin: none;
+	background-color: var(--accent);
+	width: 100%;
 	padding: none;
 	font-size: 1.3em;
 	font-weight: bold;
 }
 nav ul{
 	list-style-type: none;
-	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
 	padding: 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 nav li{
 	margin: 0;
@@ -86,18 +87,25 @@ nav li{
 nav a{
 	text-decoration: none;
 	width: 100%;
-	display: block;
+	display: inline-block;
+}
+nav a:link, nav a:visited{
+	color: var(--main-text);
+}
+nav a:hover, nav a:active{
+	color: var(--accent);
+	background-color: var(--main-text);
 }
 table{
 	margin: 1em;
-	border: 0.5em solid #6fbb6f;
+	border: 0.5em solid var(--accent);
 	border-spacing: 0px;
 }
 textArea{
 	grid-column: 1/4
 }
 thead{
-	background-color: #6fbb6f;
+	background-color: var(--accent);
 	height: 150%;
 }
 tr{
@@ -117,6 +125,23 @@ tr:nth-of-type(even){
 .attribution{
 	font-size: 60%;
 }
+a.button{
+	color: var(--main-text)
+}
+.button{
+	background-color: var(--accent);
+	border: none;
+	color: white;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+.button:hover{
+	color: var(--accent);
+	background-color: var(--main-text);
+}
 .hero{
 	margin-top: 0;
 	margin-left: auto;
@@ -126,11 +151,11 @@ tr:nth-of-type(even){
 	box-sizing: border-box;
 	margin: 0%;
 	border-style: solid;
-	border-color: #666666;
+	border-color: var(--accent);
 	border: 1%;
 	padding: 0;
-	color: #ffffff;
-	background-color: #6fbb6f;
+	color: var(--main-text);
+	background-color: var(--accent);
 	font-weight: bold;
 	font-size: 2em;
 	float: left;
@@ -141,8 +166,9 @@ tr:nth-of-type(even){
 	width: 100%
 }
 .panelOneThird:hover, .panel:hover{
-	color: #6fbb6f;
-	background-color: #ffffff;
+	color: var(--accent);
+	background-color: var(--main-text);
+	border-color: var(--main-text)
 }
 .panelOneThird{
 	width: 33.333%;
@@ -151,6 +177,44 @@ tr:nth-of-type(even){
 .panel{
 	width: 100%;
 	text-align: center;
+}
+.product{
+	background-color: var(--accent-dark);
+	color: var(--main-text);
+	padding: 5px;
+	display: grid;
+	gap: 0.5em;
+	grid-template-rows: 1fr 3fr 0.5fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "gridHead gridHead gridHead"
+						"picture gridBody gridBody"
+						"price button empty";
+}
+.product p{
+	grid-area: gridBody;
+}
+.product img{
+	grid-area: picture;
+}
+.product h2{
+	grid-area: gridHead;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.product h3{
+	grid-area: price;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.product span{
+	grid-area: button;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .wrapper{
 	margin-left: auto;
@@ -165,4 +229,7 @@ tr:nth-of-type(even){
 	.wrapper{
 		width: 100vw;
 	}
+}
+@media(min-width: 500px){
+
 }

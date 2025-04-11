@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Making Chess in Godot Was a Lot Harder Than I Thought</title>
+    <link href="devlogsAndDoodles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    	<h1>Making Chess in Godot Was a Lot Harder Than I Thought</h1>
+    </header>
+   <div class="wrapper">
+	<img class="hero" src="ChessPieces.jpg" alt="Chess pieces" width="700" height="200">
+		<p class="attribution">"<a rel="noopener noreferrer" href="https://www.flickr.com/photos/52021147@N03/9255745267">Chess Match on Courthouse Square
+    		-- 'Charge at First Light'</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/52021147@N03">Jack W. Pearce</a>
+    		is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse">CC BY-SA 2.0
+			<img src="chess_devlog_files/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"><img src="chess_devlog_files/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;">
+			<img src="chess_devlog_files/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></a>.
+    	</p>
+    <main>
+    	<p>So you know how chess is, like, supposed to simulate an ancient 
+battle? Each piece represents something that would be found on an 
+ancient battlefield. The rook was originally a chariot, the knight 
+represents cavalry,
+    	you know the whole deal. Well, it turns out that a lot of their 
+moves are designed to emulate their real-life counterparts. Chariots are
+ fast, but they can't turn, so the rook can go as many spaces as he 
+wants, but only in a straight line. The regular infantry (pawns) would 
+defend themselves
+    	with a shield from the front and stab out to their sides. </p>
+    	<p>So, a while ago, I saw that, in Chinese Chess, there's a piece 
+called the cannon. It moves like the rook, but it can (and must) jump 
+over one piece between it and its target, because cannons shoot over 
+things. And that got me thinging: "What if we made a variant of chess 
+based on more recent wars?
+    	After coming up with a few ways for pieces to move, I also realised
+ that trenches and fortifications played a large role in recent wars, so
+ I added them too.</p>
+    	<table>
+    		<thead>
+    			<tr><th>Piece</th><th>Movement</th>
+    		</tr></thead>
+    		<tbody>
+    			<tr><td>Infantryman</td><td>Moves like a normal pawn. Infantry tactics have changed in modern war, but I don't see any way to improve upon the pawn.</td></tr>
+    			<tr><td>Mechanized infantry</td><td>Moves and captures like the infantryman, but can move forward one extra space per turn <strong>before capturing.</strong> No double moves or en passant.</td></tr>
+    			<tr><td>Tank</td><td>Tanks are basaically the modern equivalent 
+of chariots, and like chariots, they aren't as agile as other pieces. 
+Moves and captures like a rook.</td></tr>
+    			<tr><td>Helicopter</td><td>Helicopters are fast-moving and can patrol a wide area. Moves and captures like a queen.</td></tr>
+    			<tr><td>Bomber</td><td>Can move to and capture on any square, unless it is blocked by the SAM (surface-to-air missile)</td></tr>
+    			<tr><td>SAM system</td><td>Moves like a rook, but cannot capture.
+ When it is moved, the player chooses a direction (orthogonal or 
+diagonal). It creates a line going to the edge of the board or until it 
+hits the exterior of a trench. No enemy airplane or helicopter can cross
+ this line. If the enemy aircraft is on the line when it is created, it 
+cannot move at all.</td></tr>
+    			<tr><td>Artillery</td><td>Moves like a rook, but captures 
+differently. Either before or after moving, it can fire in one of the 
+four orthogonal directions, taking an enemy piece out without going to 
+that square.</td></tr>
+    			<tr><td>Howitzer</td><td>Howitzers are artillery that can fire at
+ a steep angle, allowing it to go over obstacles. This piece is a lot 
+like the artillery, but there must be exactly one obstacle (either 
+trench or piece) between it and the piece it fires on.</td></tr>
+    			<tr><td>General</td><td>Modern generals are very different to 
+ancient kings, but in warfare they play a similar role. Moves like a 
+king, cannot be moved into or left in check, etc.</td></tr>
+    		</tbody>
+    	</table><table>
+      		<thead><tr><th>The Trench</th></tr></thead>
+    		<tbody>
+    			<tr><td>Each player's back ranks are considered part of the 
+trench. The trench blocks any incoming attacks, except from the 
+howitzer. Any attacking piece can attack <em>out</em> of the trench, but only the Howitzer can attack <em>into</em>
+ the trench. Pieces inside the same trench can attack each other. No 
+piece may leave one trench and enter another on the same turn.</td></tr>
+    		</tbody>  		
+    	</table>
+    	<h2>My First Attempt</h2>
+    	<p>After going through all the pieces in my head, I was itching to try out the game. Since I didn&#39;t have the ability to model and print the pieces, nor did I have a large enough board, I decided to create the game in Godot. I had seen a few Godot tutorials, and so I thought I could strike out on my own this time. That was a mistake. I couldn&#39;t remember any of the syntax, so I struggled just to create an array of buttons. I also ended up re-inventing the wheel because I didn&#39;t understand Godot&#39;s features. For each thing I added, I was kinda obsessed with adding it in the most &quot;efficient&quot; way possible, so I got stuck when choosing how to implement everything. What I ended up with is a grid of buttons, one of which has the General on it (in the wrong place). When you click the square the general is on, it highlights the squares he can move to. when you click any other square, it crashes. This took me multiple days.</p>
+    	<p>What I learned from this is that I&#39;m not ready to make Godot games without guidance. I have decided that I will now watch a tutorial on creating Chess in Godot, then try to modify it.</p>
+    </main>
+    </div>
+    <footer></footer>
+  
+
+</body></html>
