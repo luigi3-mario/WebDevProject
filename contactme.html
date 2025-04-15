@@ -2,18 +2,29 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Here you can contact Cade Allred vie E-mail or text. Fill out your E-mail address or Telephone Number and write your message, then click &quot;Send Message&quot;"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Here you can contact Cade Allred vie E-mail or text. Fill out your E-mail address or Telephone Number and write your message, then click &quot;Send Message&quot;">
     <link href="devlogsAndDoodles.css" rel="stylesheet">
-    <title></title>
+    <title>Contact Me</title>
   </head>
   <body>
   <div class="wrapper">
     <header><h1>Contact Me</h1></header>
+        <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="featured-article.html">Featured Article</a></li>
+        <li><a href="products.html">Buy a Doodle</a></li>
+        <li><a href="recentSoftware.html">Software Articles</a></li>
+        <li><a href="recentArt.html">Art</a></li>
+        <li><a href="contactme.html">Contact me</a></li>
+      </ul>
+    </nav>
     <main>
       <form method="post" action="https://webdevbasics.net/scripts/demo.php">
         <p>Preferred method of contact</p>
-        <input type="radio" name="contactPref" value="text" id="text" accesskey="t" tabindex="1"> <label for="text">Text</label> <input type="tel" placeholder="0123456789" name="telephoneNumber" id="telephoneNumber" size=10em tabindex="2">
-        <input type="radio" name="contactPref" value="email" id="email" accesskey="e" tabindex="3"> <label for="email">Email</label> <input type="email" placeholder="someone@example.com" name="email" id="email" size=20em tabindex="4">
+        <input type="radio" name="contactPref" value="text" id="text" accesskey="t" tabindex="1"> <label for="text">Text</label> <input type="tel" placeholder="0123456789" name="telephoneNumber" id="telephoneNumber" size=10 tabindex="2">
+        <input type="radio" name="contactPref" value="email" id="emailRadio" accesskey="e" tabindex="3"> <label for="emailRadio">Email</label> <input type="email" placeholder="someone@example.com" name="email" id="email" size=20 tabindex="4">
         <p>Message:</p>
         <textArea required placeholder="type your message here" name="message" id="message" tabindex="5" rows="10" cols="50"></textArea>
         <span><button class="button" type="submit">Send Message</button>
