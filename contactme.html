@@ -8,7 +8,7 @@
     <title>Contact Me</title>
   </head>
   <body>
-  <div class="wrapper">
+    <script src="formValidate.js"></script>
     <header><h1>Contact Me</h1></header>
         <nav>
       <ul>
@@ -20,13 +20,14 @@
         <li><a href="contactme.html">Contact me</a></li>
       </ul>
     </nav>
+    <div class="wrapper">
     <main>
-      <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+      <form method="post" action="https://webdevbasics.net/scripts/demo.php" id="contactForm" onsubmit="return validateForm();">
         <p>Preferred method of contact</p>
         <input type="radio" name="contactPref" value="text" id="text" accesskey="t" tabindex="1"> <label for="text">Text</label> <input type="tel" placeholder="0123456789" name="telephoneNumber" id="telephoneNumber" size=10 tabindex="2">
         <input type="radio" name="contactPref" value="email" id="emailRadio" accesskey="e" tabindex="3"> <label for="emailRadio">Email</label> <input type="email" placeholder="someone@example.com" name="email" id="email" size=20 tabindex="4">
         <p>Message:</p>
-        <textArea required placeholder="type your message here" name="message" id="message" tabindex="5" rows="10" cols="50"></textArea>
+        <textArea placeholder="type your message here" name="message" id="message" tabindex="5" rows="10" cols="50"></textArea>
         <span><button class="button" type="submit">Send Message</button>
         <button class="button" type="reset">Reset</button></span>
       </form>

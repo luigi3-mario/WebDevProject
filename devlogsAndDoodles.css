@@ -4,6 +4,7 @@
 	--background-dark: #333333;
 	--accent: #35d07a;
 	--accent-dark: #1b7441;
+	--invalid-response: #F5B2B2;
 }
 a:link, a:visited {
 	color: var(--accent);
