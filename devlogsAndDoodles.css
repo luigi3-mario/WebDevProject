@@ -142,21 +142,27 @@ ul.articles{
 a.button{
 	color: var(--main-text);
 }
-.button{
-	background-color: var(--accent-dark);
+.button, .button2{
 	border: none;
-	color: white;
 	padding: 10px 16px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
 }
+.button{
+	background-color: var(--accent-dark);
+	color: var(--main-text);
+}
 a.button2:link, a.button2:visited{
 	background-color: var(--background);
 	color: var(--accent);
 }
-.button:hover, .button2:hover{
+.button2:hover, .button2:active{
+	color: var(--background);
+	background-color: var(--accent);
+}
+.button:hover, .button:active{
 	color: var(--accent-dark);
 	background-color: var(--main-text);
 }
