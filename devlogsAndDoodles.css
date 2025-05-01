@@ -14,6 +14,7 @@ a:hover, a:active{
 	background-color: var(--accent-dark);
 	color: var(--main-text);
 }
+
 h1{
 	color: var(--accent);
 }
@@ -139,10 +140,10 @@ ul.articles{
 	text-align: center;
 }
 a.button{
-	color: var(--main-text)
+	color: var(--main-text);
 }
 .button{
-	background-color: var(--accent);
+	background-color: var(--accent-dark);
 	border: none;
 	color: white;
 	padding: 10px 16px;
@@ -150,6 +151,10 @@ a.button{
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+}
+.product button{
+	background-color: var(--background);
+	color: var(--accent-dark);
 }
 .button:hover{
 	color: var(--accent-dark);
