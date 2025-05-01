@@ -152,11 +152,11 @@ a.button{
 	display: inline-block;
 	font-size: 16px;
 }
-.product a.button:link, .product a.button:visited{
+a.button2:link, a.button2:visited{
 	background-color: var(--background);
 	color: var(--accent);
 }
-.button:hover{
+.button:hover, .button2:hover{
 	color: var(--accent-dark);
 	background-color: var(--main-text);
 }
