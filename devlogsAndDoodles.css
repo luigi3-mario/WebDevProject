@@ -162,7 +162,7 @@ a.button{
 	background-color: var(--background);
 	color: var(--accent);
 }
-.button2:hover, .button2:active{
+a.button2:hover, a.button2:active{
 	color: var(--background);
 	background-color: var(--accent);
 }
