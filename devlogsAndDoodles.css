@@ -200,6 +200,7 @@ li .panel{
 .product{
 	display: flex;
 	flex-direction: column;
+	margin-top: 1em;
 }
 .product p{
 	grid-area: gridBody;
