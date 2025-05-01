@@ -44,7 +44,7 @@ form{
 	margin-right: auto;
 	max-width: 60em;
 	background-color: var(--background-dark);
-	grid-template-columns: 1em auto auto;
+	grid-template-columns: 1em 1fr 2fr;
 	padding: 1em;
 }
 form p{
@@ -240,6 +240,9 @@ li .panel{
 	.wrapper{
 		margin: 0;
 		width: 100%;
+	}
+	.wrapper p, .wrapper h2, .wrapper h3{
+		margin: 0.5em;
 	}
 }
 @media(min-width: 900px){
