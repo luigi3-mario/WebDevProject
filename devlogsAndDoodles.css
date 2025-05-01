@@ -21,12 +21,15 @@ img, video{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	max-width: 95vw;
 }
 body{
 	background-color: var(--background);
 	color: var(--main-text);
 	font-family: arial, calibri, sans-serif;
 	font-size: 1.1em;
+	padding: 0px;
+	Margin: 0px;
 }
 figcaption{
 	text-align: center;
@@ -62,7 +65,7 @@ main{
 nav{
 	box-sizing: border-box;
 	margin: 0px;
-	background-color: var(--accent);
+	background-color: var(--accent-dark);
 	padding: 0px;
 	font-size: 1.3em;
 	font-weight: bold;
@@ -120,8 +123,20 @@ th{
 tr:nth-of-type(even){
 	background-color: var(--accent-dark);
 }
+ul.articles{
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
 .attribution{
 	font-size: 60%;
+	text-align: center;
 }
 a.button{
 	color: var(--main-text)
@@ -146,40 +161,41 @@ a.button{
 	margin-right: auto;	
 }
 .panelSet{
-	width: 100%;
+	margin-top: 1em;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	gap: 1.5em;
 }
-.panelOneThird, .panel{
+.panelset .panel{
+}
+a.panel{
 	box-sizing: border-box;
-	margin: 0%;
+	padding: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
 	border-style: solid;
+	color: var(--main-text);
 	border-color: var(--accent-dark);
 	border-width: .1em;
-	padding: 0;
 	color: var(--main-text);
 	background-color: var(--accent-dark);
 	font-weight: bold;
-	font-size: 2em;
-	float: left;
-	margin-left: auto;
-	margin-right: auto;
+	font-size: 1.5em;
+	text-align: center;
+	display: block;
 }
-.panelOneThird img, .panel img{
-	width: 100%
+li .panel{
+/* 	max-width: 90%; */
 }
-.panelOneThird:hover, .panel:hover{
+.panel img{
+}
+.panel:hover{
 	color: var(--accent-dark);
 	background-color: var(--main-text);
 	border-color: var(--main-text)
-}
-.panelOneThird{
-	width: 33.333%;
-	margin-top: 1em;
-}
-.panel{
-	width: 100%;
-	text-align: center;
 }
 .product{
 	display: flex;
@@ -215,17 +231,18 @@ a.button{
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 75em;
-	width: 90%;
 }
-@media(max-width: 320px){
+@media(max-width: 900px){
 	body{
 		font-size: 80%;
 	}
 	.wrapper{
-		width: 100vw;
+		margin: 0;
+		width: 100%;
 	}
 }
-@media(min-width: 500px){
+@media(min-width: 900px){
+	@supports(display: grid){
 	body{
 		display: grid;
 		grid-template-areas: "header header" "nav main" "footer footer";
@@ -245,7 +262,12 @@ a.button{
 		grid-area: footer;
 	}
 	.panelSet{
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.panel:nth-of-type(1){
+		grid-area: 1 / 1 / span 1 / span 3;
+	}
 	}
 }
 @media(min-width: 1200px){

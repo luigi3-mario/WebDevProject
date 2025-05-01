@@ -12,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="featured-article.html">Featured Article</a></li>
+        <li><a href="chess_devlog.html">Featured Article</a></li>
         <li><a href="products.html">Buy a Doodle</a></li>
         <li><a href="recentSoftware.html">Software Articles</a></li>
         <li><a href="recentArt.html">Art</a></li>
@@ -20,15 +20,16 @@
       </ul>
     </nav>
     <div class="wrapper">
-    <a href="chess_devlog.html"><div class="panel">
-    	<img src="testHero.png" alt="hero image" width="700" height="200">
-    	Making chess in godot is a lot harder than I thought
-    </div></a>
+
     <main>
         <div class="panelSet">
-            <a href="aboutMe.html"> <div class="panel"><img alt="picture of me" src="testImage.png" width="300" height="400">About Me</div></a>
-            <a href="recentArt.html"><div class="panel"><img alt="One of my pictures" src="testImage.png" width="300" height="400">Artwork</div></a>
-            <a href="recentSoftware.html"><div class="panel"><img alt="Image of code" src="testImage.png" width="300" height="400">Devlogs</div></a>
+        <a class="panel" href="chess_devlog.html">
+    	<picture><source media="(min-width: 901px)" srcset="ChessPieces.jpg"><source media="(max-width: 900px)" srcset="media/chessPiecesAlt.jpg"><img src="ChessPieces.jpg" alt="hero image"></picture>
+    	Making chess in godot is a lot harder than I thought
+        </a>
+            <a href="aboutMe.html" class="panel"><img alt="picture of me" src="media/pictureofMe.jpg" width="300" height="400">About Me</a>
+            <a href="recentArt.html" class="panel"><img alt="One of my pictures" src="media/characterHairNormalSize.png" width="300" height="400">Artwork</a>
+            <a href="recentSoftware.html" class="panel"><img alt="Image of code" src="media/computerCode.jpg" width="300" height="400">Devlogs</a>
             </div>
     </main>
     </div>
